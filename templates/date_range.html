@@ -5,12 +5,18 @@
     <title>J&SE1 Practical</title>
 </head>
 <body>
+{% if rows|length > 0 %}
 <h2> The sales that occurred on the date: {{date1}}</h2>
 <ul>
     <b>(Invoice ID, Branch, City, Customer Type, Gender, Product Line, Unit Price, Quantity, Tax 5%, Total)</b>
     {% for item in rows %}
     <li>{{item}}</li>
     {% endfor %}
+
 </ul>
+{%else %}
+<h2>Please enter a valid Date in which the transaction occurred.</h2>
+{% endif %}
+
 </body>
 </html>

@@ -72,6 +72,60 @@ def insert1():
     cur.execute(insert1, (id, branch, city, ctype, gender, prod, unit, quantity, tax, total, date, time, pay, cogs, gmp, gi, rating))
     return render_template('insert_data.html')
 
+@app.route('/changemem', methods=['GET'])
+def changemem():
+    print("new function")
+    ii = str(request.args['ii'])
+    ctype1 = request.args['ctype1']
+    print(ctype1, ii)
+    select2 = "select * from supermarket_sales where convert(varchar,[Invoice ID]) = ?"
+    cur = conn.cursor()
+    cur.execute(select2, ii)
+    rows = cur.fetchall()
+    print(rows)
+    if (len(rows) == 0):
+        return render_template('update_data.html', data="Cannot Update query since invoice number was not found.")
+
+    insert1 = "insert into supermarket_sales ( [Invoice ID], Branch, City, [Customer type], Gender, [Product line], [Unit price], Quantity, [Tax 5%], Total, Date, Time, Payment, cogs, [gross margin percentage], [gross income], Rating ) values ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? )"
+    cur3 = conn.cursor()
+    cur3.execute(insert1, (rows[0][0], rows[0][1], rows[0][2], ctype1, rows[0][4], rows[0][5], rows[0][6], rows[0][7], rows[0][8], rows[0][9], rows[0][10], rows[0][11], rows[0][12], rows[0][13], rows[0][14], rows[0][15], rows[0][16]))
+    # update1 = "update supermarket_sales set [Customer type] = ? where convert(varchar,[Invoice ID])= ?"
+    # # and convert(varchar, Date)>= ?"
+    #
+    # # row = cursor.fetchone()
+    # cur5 = conn.cursor()
+    # cur5.execute(update1, (ctype1, ii))
+
+    # delete1 = "delete from supermarket_sales where convert(nvarchar,[Customer type]) != ? and convert(varchar,[Invoice ID])= ?"
+    # cur5 = conn.cursor()
+    # cur5.execute(delete1, (ctype1, ii))
+
+    print("update")
+    return render_template('update_data.html', data="The member information was updated to the given invoice.")
+
+
+# @app.route('/update1', methods=['GET'])
+# def update1():
+#     ii = request.args['ii']
+#     type = request.args['type']
+#     print(type,ii)
+#     select2 = "select * from supermarket_sales where [Invoice ID]) = ?"
+#     cur = conn.cursor()
+#     cur.execute(select2, (ii))
+#     rows = cur.fetchall()
+#     print(rows)
+#     if(len(rows)==0):
+#         return render_template('update_data.html', data="Cannot Update query since invoice number was not found.")
+#
+#     update1 = "update supermarket_sales set [Customer type] = ? where [Invoice ID]= ?"
+#     # and convert(varchar, Date)>= ?"
+#
+#     # row = cursor.fetchone()
+#     cur5 = conn.cursor()
+#     cur5.execute(update1, (type,ii))
+#     # print(cur)
+#     return render_template('update_data.html', data="The member information was updated to the given invoice.")
+#
 
 
 if __name__ == '__main__':
