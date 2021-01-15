@@ -1,5 +1,7 @@
 SupermarketSales
+
 Name : Manasa Balaji 
+
 Mail:  manasa.balaji@mavs.uta.edu
 
 Link to Github Repository:
