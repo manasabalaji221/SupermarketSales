@@ -23,26 +23,26 @@ conn = pyodbc.connect(
 def hello_world():
     return render_template('index.html')
 
-@app.route('/index', methods=['GET'])
-def date_s():
-    start_date = request.args['sdate']
-    print(start_date)
-    result = []
-
-    c = 0
-    select1 = "select * from supermarket_sales where convert(varchar, Date) = ?"
-    # and convert(varchar, Date)>= ?"
-
-    # row = cursor.fetchone()
-    cur = conn.cursor()
-    cur.execute(select1, (start_date))
-    # print(cur)
-    rows = cur.fetchall()
-    # print(type(rows))
-
-    return render_template('date_range.html', rows=rows, date1=start_date)
-
-
+# @app.route('/index', methods=['GET'])
+# def date_s():
+#     start_date = request.args['sdate']
+#     print(start_date)
+#     result = []
+#
+#     c = 0
+#     select1 = "select * from supermarket_sales where convert(varchar, Date) = ?"
+#     # and convert(varchar, Date)>= ?"
+#
+#     # row = cursor.fetchone()
+#     cur = conn.cursor()
+#     cur.execute(select1, (start_date))
+#     # print(cur)
+#     rows = cur.fetchall()
+#     # print(type(rows))
+#
+#     return render_template('date_range.html', rows=rows, date1=start_date)
+#
+#
 
 if __name__ == '__main__':
     # app.run(host='0.0.0.0', port=8080)
