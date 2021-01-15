@@ -1,7 +1,7 @@
 from flask import Flask,render_template,request,flash
 import pyodbc
 from random import randint
-
+import pygal
 app = Flask(__name__)
 
 # @app.route("/")
@@ -102,6 +102,48 @@ def changemem():
 
     print("update")
     return render_template('update_data.html', data="The member information was updated to the given invoice.")
+
+
+@app.route('/chart_pie', methods=['GET'])
+def chart_pie():
+    pie_chart = pygal.Pie(height=300)
+    pie_chart.title = 'Sales by Gender'
+    select5 = "select convert(varchar,[Gender]), COUNT(*) from supermarket_sales group by convert(varchar,[Gender])"
+    cur = conn.cursor()
+    cur.execute(select5)
+    rows = cur.fetchall()
+    print(rows)
+    pie_chart.add(rows[0][0],rows[0][1])
+    pie_chart.add(rows[1][0],rows[1][1])
+    # pie_chart.add(rows[2][0],rows[2][1])
+    # pie_chart.add('rows[3][0]',rows[3][1])
+    # pie_chart.add('rows[4][0]',rows[4][1])
+
+    pie_chart2 = pygal.Pie(height=300)
+    pie_chart2.title = 'Sales in different product categories'
+    select5 = "select convert(varchar,[Product Line]), COUNT(*) from supermarket_sales group by convert(varchar,[Product Line])"
+    cur = conn.cursor()
+    cur.execute(select5)
+    rows = cur.fetchall()
+    print(rows)
+    pie_chart2.add(rows[0][0], rows[0][1])
+    pie_chart2.add(rows[1][0], rows[1][1])
+    pie_chart2.add(rows[2][0],rows[2][1])
+    pie_chart2.add(rows[3][0],rows[3][1])
+    pie_chart2.add(rows[4][0],rows[4][1])
+
+    pie_chart3 = pygal.Pie(height=300)
+    pie_chart3.title = 'Sales in different cities'
+    select5 = "select convert(varchar,[City]), COUNT(*) from supermarket_sales group by convert(varchar,[City])"
+    cur = conn.cursor()
+    cur.execute(select5)
+    rows = cur.fetchall()
+    print(rows)
+    pie_chart3.add(rows[0][0], rows[0][1])
+    pie_chart3.add(rows[1][0], rows[1][1])
+    pie_chart3.add(rows[2][0], rows[2][1])
+
+    return render_template('pie_chart.html', chart=pie_chart.render_data_uri(), chart2=pie_chart2.render_data_uri(), chart3=pie_chart3.render_data_uri() )
 
 
 # @app.route('/update1', methods=['GET'])

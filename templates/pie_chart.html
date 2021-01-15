@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Sales</title>
+</head>
+<body>
+{% if chart%}
+    <embed type="image/svg+xml" src= {{ chart|safe }} />
+{% endif %}
+<br>
+{% if chart2%}
+    <embed type="image/svg+xml" src= {{ chart2|safe }} />
+{% endif %}
+<br>
+{% if chart3%}
+    <embed type="image/svg+xml" src= {{ chart3|safe }} />
+{% endif %}
+</body>
+</html>
