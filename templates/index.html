@@ -11,15 +11,54 @@
     </h2>
     <br><br>
 </center>
+    <h3>Manasa Balaji</h3>
+    <h3>manasa.balaji@mavs.uta.edu</h3>
 
 <!--Select information from database-->
-<h4>Get information about Sales on a particular date: </h4>
+<h4>1. Get information about Sales on a particular date: </h4>
 <form action="/index" method="get">
     Enter the date:<input type="text" name="sdate" method="get" >
     <input type="submit" value="Execute">
 </form>
 
+<!-- Record information about a sale-->
+<h4>2. Record a sale</h4>
+<form action="/index" method="get">
+    <ul>
+    <li>Branch:<input type="text" name="branch" method="get" ></li>
+    <li>City:<input type="text" name="city" method="get" ></li>
+    <li>Customer Type:
+        <select id="ctype" name="ctype" method="get">
+        <option value="Member">Member</option>
+        <option value="Normal">Normal</option>
+        </select></li>
+    <li>Gender:
+        <select id="gender" name="gender" method="get">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+        </select></li>
+    <li>Product Line:
+        <select id="prod" name="prod" method="get">
+        <option value="fash">Fashion Accessories</option>
+        <option value="food">Food and Beverages</option>
+        <option value="elec">Electronic Accessories</option>
+        <option value="sport">Sports and Travel</option>
+        <option value="home">Home and Lifestyle</option>
+        </select></li>
+    <li>Unit Price:<input type="number" step="0.01" name="unit" method="get" ></li>
 
+    <li>Quantity:<input type="number" name="quantity" method="get" ></li>
+    <li>Date:(MM/DD/YYYY) <input type="text" name="date" method="get" ></li>
+    <li>Time: (HH:MM) <input type="text" name="time" method="get" ></li>
+    <li>Payment:
+        <select id="pay" name="pay" method="get">
+        <option value="ewallet">Ewallet</option>
+        <option value="card">Credit card</option>
+        <option value="cash">Cash</option>
+        </select></li>
+    <li>Rating:<input type="number" step="0.1" name="rating" method="get" ></li>
+        </ul>
+</form>
 
 </body>
 </html>

@@ -32,7 +32,7 @@ def date_s():
     c = 0
     select1 = "select * from supermarket_sales where convert(varchar, Date) = ?"
     # and convert(varchar, Date)>= ?"
-    
+
     # row = cursor.fetchone()
     cur = conn.cursor()
     cur.execute(select1, (start_date))
