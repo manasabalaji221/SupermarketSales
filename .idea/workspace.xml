@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbe2721-846d-46da-99a7-943d222b39c1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/date_range.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/click/formatting.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/click/formatting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/flask/sessions.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/flask/sessions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/chardet/mbcssm.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/chardet/mbcssm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/dist.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/package_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/package_index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/werkzeug/middleware/dispatcher.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/werkzeug/middleware/dispatcher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/werkzeug/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/werkzeug/routing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+            <state relative-caret-position="119">
+              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -36,10 +28,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/date_range.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="170">
+              <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -62,6 +63,8 @@
       <list>
         <option value="$PROJECT_DIR$/application.py" />
         <option value="$PROJECT_DIR$/env/pages/index.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/date_range.html" />
         <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
@@ -89,6 +92,11 @@
               <item name="SupermarketSales" type="b2602c69:ProjectViewProjectNode" />
               <item name="SupermarketSales" type="462c0819:PsiDirectoryNode" />
               <item name="archive" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SupermarketSales" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SupermarketSales" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -159,15 +167,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="170">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/date_range.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
+        <state relative-caret-position="119">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>

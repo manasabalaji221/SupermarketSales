@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J&SE1 Practical</title>
+</head>
+<body>
+<h2> The sales that occurred on the date: {{date1}}</h2>
+<ul>
+    <b>(Invoice ID, Branch, City, Customer Type, Gender, Product Line, Unit Price, Quantity, Tax 5%, Total)</b>
+    {% for item in rows %}
+    <li>{{item}}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
