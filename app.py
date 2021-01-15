@@ -142,6 +142,8 @@ def chart_pie():
     pie_chart3.add(rows[0][0], rows[0][1])
     pie_chart3.add(rows[1][0], rows[1][1])
     pie_chart3.add(rows[2][0], rows[2][1])
+    pie_chart3.add(rows[3][0], rows[3][1])
+
 
     return render_template('pie_chart.html', chart=pie_chart.render_data_uri(), chart2=pie_chart2.render_data_uri(), chart3=pie_chart3.render_data_uri() )
 
