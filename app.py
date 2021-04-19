@@ -7,9 +7,9 @@ app = Flask(__name__)
 # @app.route("/")
 # def index():
 server = 'mbsalesdb.database.windows.net'
-database = 'mbsalesdb'
+database = 'mysalesdb'
 username = 'salesdb'
-password = 'Manasa15'
+password = 'add your password here'
 driver = '{ODBC Driver 17 for SQL Server}'
 conn = pyodbc.connect(
         'DRIVER=' + driver + ';SERVER=' + server + ';PORT=1433;DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
