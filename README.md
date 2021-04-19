@@ -1,15 +1,5 @@
 SupermarketSales
 
-Name : Manasa Balaji 
-
-Mail:  manasa.balaji@mavs.uta.edu
-
-Link to Github Repository:
-https://github.com/manasabalaji221/SupermarketSales
-
-Link to the web application:
-https://marketsalesapp1.azurewebsites.net/
-
 For this web application, I have used the Supermarket Sales Dataset from Kaggle. It has a list of invoices created at a supermarket and it’s details. There are 17 attributes in this dataset and around 1000 values. The attributes are [Invoice ID], Branch, City, [Customer type], Gender, [Product line], [Unit price], Quantity, [Tax 5%], Total, Date, Time, Payment, cogs, [gross margin percentage], [gross income] and Rating. 
 
 The application is built on a Python Flask application with the front end being HTML, CSS. I hosted this application on Microsoft Azure App Service. The database server used was an SQL server and the database was the SQL database on Azure. 
